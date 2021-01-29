@@ -547,9 +547,9 @@ public class searchCustomer extends javax.swing.JInternalFrame {
     String contact = txtContact.getText();
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       preparedStatement =
           connection.prepareStatement(
               "UPDATE CUSTOMER SET firstName = ?, lastName = ?, NIC = ?, passport = ?, address= ?, DOB = ?, gender = ?, contact = ?, photo = ? WHERE ID = ?");
@@ -587,9 +587,9 @@ public class searchCustomer extends javax.swing.JInternalFrame {
     String ID = txtCustomerID.getText();
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       preparedStatement = connection.prepareStatement("SELECT * FROM CUSTOMER WHERE ID = ?");
       preparedStatement.setString(1, ID);
       ResultSet resultSet = preparedStatement.executeQuery();

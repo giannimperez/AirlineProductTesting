@@ -247,9 +247,9 @@ public class userCreation extends javax.swing.JInternalFrame {
     String password = txtPassword.getText();
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       preparedStatement =
           connection.prepareStatement(
               "INSERT INTO USER (ID, firstName, lastName, username, password) VALUES (?, ?, ?, ?, ?)");
@@ -274,9 +274,9 @@ public class userCreation extends javax.swing.JInternalFrame {
 
   public void autoID() {
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       Statement statement = connection.createStatement();
       ResultSet resultSet = statement.executeQuery("SELECT MAX(ID) FROM USER");
       resultSet.next();

@@ -640,9 +640,11 @@ public class ticket extends javax.swing.JInternalFrame {
     String depart = Objects.requireNonNull(txtDepart.getSelectedItem()).toString().trim();
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
-      connection = DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
-      preparedStatement = connection.prepareStatement("SELECT * FROM FLIGHT WHERE source = ? AND depart = ?");
+      Class.forName("com.mysql.cj.jdbc.Driver");
+      connection =
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
+      preparedStatement =
+          connection.prepareStatement("SELECT * FROM FLIGHT WHERE source = ? AND depart = ?");
 
       preparedStatement.setString(1, source);
       preparedStatement.setString(2, depart);
@@ -679,9 +681,9 @@ public class ticket extends javax.swing.JInternalFrame {
 
   public void autoID() {
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       Statement statement = connection.createStatement();
       ResultSet resultSet = statement.executeQuery("select MAX(ID) from ticket");
       resultSet.next();
@@ -705,9 +707,9 @@ public class ticket extends javax.swing.JInternalFrame {
     String id = txtCustomerID.getText();
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       preparedStatement = connection.prepareStatement("SELECT * FROM CUSTOMER WHERE ID = ?");
       preparedStatement.setString(1, id);
       ResultSet resultSet = preparedStatement.executeQuery();
@@ -769,9 +771,9 @@ public class ticket extends javax.swing.JInternalFrame {
     String date = dateFormat.format(txtDate.getDate());
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       preparedStatement =
           connection.prepareStatement(
               "INSERT INTO TICKET (ID, flightID, customerID, class, price, seats, date) VALUES (?, ?, ?, ?, ?, ?, ?)");

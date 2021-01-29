@@ -193,9 +193,9 @@ public class Login extends javax.swing.JFrame {
       JOptionPane.showMessageDialog(this, "Username or Password Blank");
     } else {
       try {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         connection =
-            DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+            DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
         preparedStatement =
             connection.prepareStatement("SELECT * FROM USER WHERE username = ? AND password = ?");
         preparedStatement.setString(1, username);

@@ -469,11 +469,11 @@ public class addCustomer extends javax.swing.JInternalFrame {
 
   public void autoID() {
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       Statement statement = connection.createStatement();
-      ResultSet resultSet = statement.executeQuery("select MAX(id) from customer");
+      ResultSet resultSet = statement.executeQuery("SELECT MAX(ID) from CUSTOMER");
       resultSet.next();
       resultSet.getString("MAX(id)");
       if (resultSet.getString("MAX(id)") == null) {
@@ -557,9 +557,9 @@ public class addCustomer extends javax.swing.JInternalFrame {
     String contact = txtContact.getText();
 
     try {
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
       connection =
-          DriverManager.getConnection("jdbc:mysql://localhost/airline", "andrew", "password");
+          DriverManager.getConnection("jdbc:mysql://localhost/airline", "root", "password");
       preparedStatement =
           connection.prepareStatement(
               "INSERT INTO CUSTOMER(ID, firstName, lastName, NIC, passport, address, DOB, gender, contact, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
