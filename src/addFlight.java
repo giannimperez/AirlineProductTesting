@@ -82,10 +82,10 @@ public class addFlight extends javax.swing.JInternalFrame {
     jLabel6.setText("Date");
 
     jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel7.setText("Dep Time");
+    jLabel7.setText("Depart Time");
 
     jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-    jLabel8.setText("Arr Time");
+    jLabel8.setText("Arrival Time");
 
     jLabel9.setForeground(new java.awt.Color(255, 255, 255));
     jLabel9.setText("Flight Charge");

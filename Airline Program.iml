@@ -32,7 +32,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/OneDrive/Documents/Jar Files/jcalendar-1.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Jar Files/jcalendar-1.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -41,7 +41,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/OneDrive/Documents/Jar Files/jgoodies-common-1.2.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Jar Files/jgoodies-common-1.2.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -50,7 +50,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/OneDrive/Documents/Jar Files/jgoodies-looks-2.4.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Jar Files/jgoodies-looks-2.4.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -59,7 +59,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/OneDrive/Documents/Jar Files/junit-4.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Jar Files/junit-4.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -68,7 +68,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.23.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Jar Files/mysql-connector-java-8.0.23.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

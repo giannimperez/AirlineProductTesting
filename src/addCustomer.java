@@ -15,9 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /*
@@ -268,6 +266,16 @@ public class addCustomer extends javax.swing.JInternalFrame {
                                                 javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(
                                                 jPanel2Layout
+                                                    .createParallelGroup(
+                                                        javax.swing.GroupLayout.Alignment.LEADING,
+                                                        false)
+                                                    .addComponent(
+                                                        txtDOB,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        174,
+                                                        Short.MAX_VALUE))
+                                            .addGroup(
+                                                jPanel2Layout
                                                     .createSequentialGroup()
                                                     .addComponent(r1)
                                                     .addGap(18, 18, 18)
@@ -276,13 +284,21 @@ public class addCustomer extends javax.swing.JInternalFrame {
                     .addContainerGap(41, Short.MAX_VALUE)));
     jPanel2Layout.setVerticalGroup(
         jPanel2Layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(
                 jPanel2Layout
                     .createSequentialGroup()
                     .addGap(37, 37, 37)
+                    .addGroup(
+                        jPanel2Layout
+                            .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(
+                                txtDOB,
+                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel8)
-                    .addGap(18, 18, 18)
                     .addGroup(
                         jPanel2Layout
                             .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
