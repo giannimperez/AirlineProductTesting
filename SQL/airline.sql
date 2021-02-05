@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS AIRLINE;
+
 CREATE TABLE `customer`
 (
     `ID`        varchar(255) NOT NULL,
