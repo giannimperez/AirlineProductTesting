@@ -1,3 +1,4 @@
+import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,6 +8,7 @@ import java.sql.SQLException;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -15,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  * and open the template in the editor.
  */
 
-public class ticketReport extends javax.swing.JInternalFrame {
+public class ticketReport extends JInternalFrame {
 
   /** Creates new form ticketReport */
   public ticketReport() {
@@ -32,12 +34,12 @@ public class ticketReport extends javax.swing.JInternalFrame {
   // <editor-fold default state="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
-    jTable1 = new javax.swing.JTable();
-    javax.swing.JButton jButton1 = new javax.swing.JButton();
+    JScrollPane jScrollPane1 = new JScrollPane();
+    jTable1 = new JTable();
+    JButton jButton1 = new JButton();
 
     jTable1.setModel(
-        new javax.swing.table.DefaultTableModel(
+        new DefaultTableModel(
             new Object[][] {},
             new String[] {
               "Ticket No", "Flight No", "Customer ID", "Class", "Price", "Seats", "Date"
@@ -47,61 +49,53 @@ public class ticketReport extends javax.swing.JInternalFrame {
     jButton1.setText("Cancel");
     jButton1.addActionListener(this::jButton1ActionPerformed);
 
-    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    GroupLayout layout = new GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
         layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(
                 layout
                     .createSequentialGroup()
                     .addGroup(
                         layout
-                            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .createParallelGroup(GroupLayout.Alignment.LEADING)
                             .addGroup(
                                 layout
                                     .createSequentialGroup()
                                     .addContainerGap()
                                     .addComponent(
                                         jScrollPane1,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        GroupLayout.PREFERRED_SIZE,
                                         509,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        GroupLayout.PREFERRED_SIZE))
                             .addGroup(
                                 layout
                                     .createSequentialGroup()
                                     .addGap(226, 226, 226)
                                     .addComponent(
                                         jButton1,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        GroupLayout.PREFERRED_SIZE,
                                         155,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        GroupLayout.PREFERRED_SIZE)))
                     .addContainerGap(35, Short.MAX_VALUE)));
     layout.setVerticalGroup(
         layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(
                 layout
                     .createSequentialGroup()
                     .addGap(29, 29, 29)
                     .addComponent(
-                        jScrollPane1,
-                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                        259,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                        jScrollPane1, GroupLayout.PREFERRED_SIZE, 259, GroupLayout.PREFERRED_SIZE)
                     .addGap(35, 35, 35)
                     .addComponent(
-                        jButton1,
-                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                        49,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                        jButton1, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(37, Short.MAX_VALUE)));
-
     pack();
   } // </editor-fold>//GEN-END:initComponents
 
-  private void jButton1ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jButton1ActionPerformed
+  private void jButton1ActionPerformed(ActionEvent evt) { // GEN-FIRST:event_jButton1ActionPerformed
     // TODO add your handling code here:
     this.hide();
   } // GEN-LAST:event_jButton1ActionPerformed
@@ -142,6 +136,6 @@ public class ticketReport extends javax.swing.JInternalFrame {
     }
   }
 
-  private javax.swing.JTable jTable1;
+  private JTable jTable1;
   // End of variables declaration//GEN-END:variables
 }

@@ -5,8 +5,12 @@
  */
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class Main extends javax.swing.JFrame {
+public class Main extends JFrame {
 
   /** Creates new form Main */
   public Main() {
@@ -20,7 +24,7 @@ public class Main extends javax.swing.JFrame {
   // <editor-fold default state="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    jDesktopPane1 = new javax.swing.JDesktopPane();
+    jDesktopPane1 = new JDesktopPane();
     JMenuBar jMenuBar1 = new JMenuBar();
     JMenu jMenu1 = new JMenu();
     JMenuItem jMenuItem1 = new JMenuItem();
@@ -33,18 +37,18 @@ public class Main extends javax.swing.JFrame {
     JMenu jMenu4 = new JMenu();
     JMenuItem jMenuItem5 = new JMenuItem();
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-    setPreferredSize(new java.awt.Dimension(1366, 768));
+    setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    setPreferredSize(new Dimension(1366, 768));
 
-    javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+    GroupLayout jDesktopPane1Layout = new GroupLayout(jDesktopPane1);
     jDesktopPane1.setLayout(jDesktopPane1Layout);
     jDesktopPane1Layout.setHorizontalGroup(
         jDesktopPane1Layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE));
     jDesktopPane1Layout.setVerticalGroup(
         jDesktopPane1Layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGap(0, 279, Short.MAX_VALUE));
 
     jMenu1.setText("Customer");
@@ -89,22 +93,18 @@ public class Main extends javax.swing.JFrame {
 
     setJMenuBar(jMenuBar1);
 
-    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    GroupLayout layout = new GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
-        layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1));
+        layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jDesktopPane1));
     layout.setVerticalGroup(
-        layout
-            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1));
+        layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jDesktopPane1));
 
     pack();
   } // </editor-fold>//GEN-END:initComponents
 
   private void jMenuItem1ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jMenuItem1ActionPerformed
+      ActionEvent evt) { // GEN-FIRST:event_jMenuItem1ActionPerformed
     // TODO add your handling code here:
 
     addCustomer customer = new addCustomer();
@@ -113,7 +113,7 @@ public class Main extends javax.swing.JFrame {
   } // GEN-LAST:event_jMenuItem1ActionPerformed
 
   private void jMenuItem2ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jMenuItem2ActionPerformed
+      ActionEvent evt) { // GEN-FIRST:event_jMenuItem2ActionPerformed
     // TODO add your handling code here:
 
     searchCustomer searchCustomer = new searchCustomer();
@@ -122,7 +122,7 @@ public class Main extends javax.swing.JFrame {
   } // GEN-LAST:event_jMenuItem2ActionPerformed
 
   private void jMenuItem4ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jMenuItem4ActionPerformed
+      ActionEvent evt) { // GEN-FIRST:event_jMenuItem4ActionPerformed
     // TODO add your handling code here:
     addFlight flight = new addFlight();
     jDesktopPane1.add(flight);
@@ -130,7 +130,7 @@ public class Main extends javax.swing.JFrame {
   } // GEN-LAST:event_jMenuItem4ActionPerformed
 
   private void jMenuItem3ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jMenuItem3ActionPerformed
+      ActionEvent evt) { // GEN-FIRST:event_jMenuItem3ActionPerformed
     // TODO add your handling code here:
     ticket ticket = new ticket();
     jDesktopPane1.add(ticket);
@@ -138,7 +138,7 @@ public class Main extends javax.swing.JFrame {
   } // GEN-LAST:event_jMenuItem3ActionPerformed
 
   private void jMenuItem6ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jMenuItem6ActionPerformed
+      ActionEvent evt) { // GEN-FIRST:event_jMenuItem6ActionPerformed
     // TODO add your handling code here:
 
     ticketReport ticketReport = new ticketReport();
@@ -147,7 +147,7 @@ public class Main extends javax.swing.JFrame {
   } // GEN-LAST:event_jMenuItem6ActionPerformed
 
   private void jMenuItem5ActionPerformed(
-      java.awt.event.ActionEvent evt) { // GEN-FIRST:event_jMenuItem5ActionPerformed
+      ActionEvent evt) { // GEN-FIRST:event_jMenuItem5ActionPerformed
     // TODO add your handling code here:
 
     userCreation user = new userCreation();
@@ -163,10 +163,9 @@ public class Main extends javax.swing.JFrame {
      * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
      */
     try {
-      for (javax.swing.UIManager.LookAndFeelInfo info :
-          javax.swing.UIManager.getInstalledLookAndFeels()) {
+      for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
         if ("Nimbus".equals(info.getName())) {
-          javax.swing.UIManager.setLookAndFeel(info.getClassName());
+          UIManager.setLookAndFeel(info.getClassName());
           break;
         }
       }
@@ -174,16 +173,15 @@ public class Main extends javax.swing.JFrame {
         | InstantiationException
         | IllegalAccessException
         | UnsupportedLookAndFeelException ex) {
-      java.util.logging.Logger.getLogger(Main.class.getName())
-          .log(java.util.logging.Level.SEVERE, null, ex);
+      Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
     }
     // </editor-fold>
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> new Main().setVisible(true));
+    EventQueue.invokeLater(() -> new Main().setVisible(true));
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JDesktopPane jDesktopPane1;
+  private JDesktopPane jDesktopPane1;
   // End of variables declaration//GEN-END:variables
 }
